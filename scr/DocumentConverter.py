@@ -15,7 +15,7 @@ CurrentLine= (df.iat[0, 0] )
 for i in range(0, len(df)):
     CurrentLine= (df.iat[i, 0] )
     PosLine = CurrentLine.find("D", (len(CurrentLine)-7), len(CurrentLine))
-    if PosLine != -1  and (CurrentLine.find("UBER") or CurrentLine.find("UBERBR")  ):
+    if PosLine != -1  and CurrentLine.find("UBER") != -1:
         NewLine = CurrentLine.replace(',', '.')
         ValueArray[i] =  (NewLine[(len(NewLine)-7):(len(NewLine)-2)])
         print (ValueArray[i])
